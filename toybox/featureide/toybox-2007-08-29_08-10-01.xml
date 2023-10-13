@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+    <properties/>
+    <struct>
+        <and abstract="true" mandatory="true" name="__Root__">
+            <feature name="CONFIG_DF"/>
+            <feature name="CONFIG_DF_PEDANTIC"/>
+            <feature name="CONFIG_TOYSH_QUOTES"/>
+            <feature name="CONFIG_TOYSH"/>
+            <feature name="CONFIG_MKE2FS"/>
+            <feature name="CONFIG_MKE2FS_JOURNAL"/>
+            <feature name="CONFIG_TOYSH_BUILTINS"/>
+            <feature name="CONFIG_TOYSH_TTY"/>
+            <feature name="CONFIG_MKE2FS_GEN"/>
+            <feature name="CONFIG_READLINK"/>
+            <feature name="CONFIG_READLINK_F"/>
+            <feature name="CONFIG_CD"/>
+            <feature name="CONFIG_TOYSH_PROFILE"/>
+            <feature name="CONFIG_TOYSH_JOBCTL"/>
+            <feature name="CONFIG_HELP_LONG"/>
+            <feature name="CONFIG_HELP"/>
+            <feature name="CONFIG_TOYSH_LOCALS"/>
+            <feature name="CONFIG_TOYSH_ENVVARS"/>
+            <feature name="CONFIG_CD_P"/>
+            <feature name="CONFIG_TOYSH_PROCARGS"/>
+            <feature name="CONFIG_EXIT"/>
+            <feature name="CONFIG_TOYSH_PIPES"/>
+            <feature name="CONFIG_TOYBOX"/>
+            <feature name="CONFIG_MKE2FS_EXTENDED"/>
+            <feature name="CONFIG_TOYSH_FLOWCTL"/>
+            <feature name="CONFIG_MKE2FS_LABEL"/>
+            <feature name="CONFIG_TOYSH_ARRAYS"/>
+            <feature name="CONFIG_TOYSH_WILDCARDS"/>
+        </and>
+    </struct>
+    <constraints>
+        <rule>
+            <disj>
+                <var>CONFIG_DF</var>
+                <not>
+                    <var>CONFIG_DF_PEDANTIC</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYSH_QUOTES</var>
+                </not>
+                <var>CONFIG_TOYSH</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_MKE2FS</var>
+                <not>
+                    <var>CONFIG_MKE2FS_JOURNAL</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYSH_BUILTINS</var>
+                </not>
+                <var>CONFIG_TOYSH</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYSH</var>
+                <not>
+                    <var>CONFIG_TOYSH_TTY</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_MKE2FS</var>
+                <not>
+                    <var>CONFIG_MKE2FS_GEN</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_READLINK</var>
+                <not>
+                    <var>CONFIG_READLINK_F</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_CD</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYSH_PROFILE</var>
+                </not>
+                <var>CONFIG_TOYSH_TTY</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYSH_JOBCTL</var>
+                </not>
+                <var>CONFIG_TOYSH_TTY</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_HELP_LONG</var>
+                </not>
+                <var>CONFIG_HELP</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYSH_LOCALS</var>
+                </not>
+                <var>CONFIG_TOYSH_ENVVARS</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_CD_P</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYSH_QUOTES</var>
+                <not>
+                    <var>CONFIG_TOYSH_PROCARGS</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_EXIT</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYSH_PIPES</var>
+                </not>
+                <var>CONFIG_TOYSH</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYBOX</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_MKE2FS_EXTENDED</var>
+                </not>
+                <var>CONFIG_MKE2FS</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYSH</var>
+                <not>
+                    <var>CONFIG_TOYSH_FLOWCTL</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_MKE2FS</var>
+                <not>
+                    <var>CONFIG_MKE2FS_LABEL</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYSH_QUOTES</var>
+                <not>
+                    <var>CONFIG_TOYSH_ENVVARS</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYSH_ARRAYS</var>
+                </not>
+                <var>CONFIG_TOYSH_LOCALS</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYSH_WILDCARDS</var>
+                </not>
+                <var>CONFIG_TOYSH_QUOTES</var>
+            </disj>
+        </rule>
+    </constraints>
+    <calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+    <comments/>
+    <featureOrder userDefined="false"/>
+</featureModel>

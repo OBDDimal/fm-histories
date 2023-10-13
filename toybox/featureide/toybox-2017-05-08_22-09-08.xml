@@ -1,0 +1,1035 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<featureModel>
+    <properties/>
+    <struct>
+        <and abstract="true" mandatory="true" name="__Root__">
+            <feature name="CONFIG_ID_Z"/>
+            <feature name="CONFIG_ID"/>
+            <feature name="CONFIG_FSFREEZE"/>
+            <feature name="CONFIG_TOYBOX_FIFREEZE"/>
+            <feature name="CONFIG_TOYBOX_FALLOCATE"/>
+            <feature name="CONFIG_FALLOCATE"/>
+            <feature name="CONFIG_TOYBOX_HELP"/>
+            <feature name="CONFIG_HELP"/>
+            <feature name="CONFIG_PASSWD"/>
+            <feature name="CONFIG_PASSWD_SAD"/>
+            <feature name="CONFIG_TOYBOX_SELINUX"/>
+            <feature name="CONFIG_TOYBOX_LSM_NONE"/>
+            <feature name="CONFIG_SETENFORCE"/>
+            <feature name="CONFIG_TOYBOX_SHADOW"/>
+            <feature name="CONFIG_TOYBOX_ON_ANDROID"/>
+            <feature name="CONFIG_LOG"/>
+            <feature name="CONFIG_GETPROP"/>
+            <feature name="CONFIG_START"/>
+            <feature name="CONFIG_W"/>
+            <feature name="CONFIG_TOYBOX_UTMPX"/>
+            <feature name="CONFIG_FGREP"/>
+            <feature name="CONFIG_GREP"/>
+            <feature name="CONFIG_MKFIFO_Z"/>
+            <feature name="CONFIG_TOYBOX_FLOAT"/>
+            <feature name="CONFIG_SORT_BIG"/>
+            <feature name="CONFIG_SORT_FLOAT"/>
+            <feature name="CONFIG_KILL"/>
+            <feature name="CONFIG_KILLALL5"/>
+            <feature name="CONFIG_MKFIFO"/>
+            <feature name="CONFIG_SORT"/>
+            <feature name="CONFIG_GZIP"/>
+            <feature name="CONFIG_TOYBOX_LIBZ"/>
+            <feature name="CONFIG_LS"/>
+            <feature name="CONFIG_LS_COLOR"/>
+            <feature name="CONFIG_TOYBOX_FORK"/>
+            <feature name="CONFIG_TOYBOX_MUSL_NOMMU_IS_BROKEN"/>
+            <feature name="CONFIG_MKE2FS_EXTENDED"/>
+            <feature name="CONFIG_MKE2FS"/>
+            <feature name="CONFIG_SENDEVENT"/>
+            <feature name="CONFIG_TOYBOX_PRLIMIT"/>
+            <feature name="CONFIG_ULIMIT"/>
+            <feature name="CONFIG_PGREP"/>
+            <feature name="CONFIG_PGKILL_COMMON"/>
+            <feature name="CONFIG_XARGS"/>
+            <feature name="CONFIG_XARGS_PEDANTIC"/>
+            <feature name="CONFIG_EXIT"/>
+            <feature name="CONFIG_EGREP"/>
+            <feature name="CONFIG_TOYBOX_ICONV"/>
+            <feature name="CONFIG_NSENTER"/>
+            <feature name="CONFIG_TOYBOX_CONTAINER"/>
+            <feature name="CONFIG_TOP_COMMON"/>
+            <feature name="CONFIG_TOP"/>
+            <feature name="CONFIG_CD"/>
+            <feature name="CONFIG_TOYBOX_UID_USR"/>
+            <feature name="CONFIG_TOYBOX"/>
+            <feature name="CONFIG_HELP_EXTRAS"/>
+            <feature name="CONFIG_OPENVT"/>
+            <feature name="CONFIG_RESTORECON"/>
+            <feature name="CONFIG_LSPCI_TEXT"/>
+            <feature name="CONFIG_LSPCI"/>
+            <feature name="CONFIG_MKNOD_Z"/>
+            <feature name="CONFIG_MKNOD"/>
+            <feature name="CONFIG_MKE2FS_GEN"/>
+            <feature name="CONFIG_SHA256SUM"/>
+            <feature name="CONFIG_TOYBOX_LIBCRYPTO"/>
+            <feature name="CONFIG_MKE2FS_JOURNAL"/>
+            <feature name="CONFIG_KLOGD"/>
+            <feature name="CONFIG_KLOGD_SOURCE_RING_BUFFER"/>
+            <feature name="CONFIG_SEQ"/>
+            <feature name="CONFIG_DHCPD"/>
+            <feature name="CONFIG_DEBUG_DHCP"/>
+            <feature name="CONFIG_CP"/>
+            <feature name="CONFIG_CP_PRESERVE"/>
+            <feature name="CONFIG_NBD_CLIENT"/>
+            <feature name="CONFIG_SHA224SUM"/>
+            <feature name="CONFIG_MKDIR"/>
+            <feature name="CONFIG_MKDIR_Z"/>
+            <feature name="CONFIG_TOYBOX_UID_SYS"/>
+            <feature name="CONFIG_SETPROP"/>
+            <feature name="CONFIG_ICONV"/>
+            <feature name="CONFIG_SLEEP_FLOAT"/>
+            <feature name="CONFIG_TOYBOX_SMACK"/>
+            <feature name="CONFIG_TAIL"/>
+            <feature name="CONFIG_TAIL_SEEK"/>
+            <feature name="CONFIG_RUNCON"/>
+            <feature name="CONFIG_LOGGER"/>
+            <feature name="CONFIG_SYSLOGD"/>
+            <feature name="CONFIG_TIMEOUT"/>
+            <feature name="CONFIG_CHCON"/>
+            <feature name="CONFIG_TOYBOX_HELP_DASHDASH"/>
+            <feature name="CONFIG_MKPASSWD"/>
+            <feature name="CONFIG_GETENFORCE"/>
+            <feature name="CONFIG_CAT_V"/>
+            <feature name="CONFIG_CAT"/>
+            <feature name="CONFIG_TOYBOX_ANDROID_SCHEDPOLICY"/>
+            <feature name="CONFIG_MKE2FS_LABEL"/>
+            <feature name="CONFIG_GUNZIP"/>
+            <feature name="CONFIG_IOTOP"/>
+            <feature name="CONFIG_UNSHARE"/>
+            <feature name="CONFIG_SULOGIN"/>
+            <feature name="CONFIG_SHA384SUM"/>
+            <feature name="CONFIG_CRONTAB"/>
+            <feature name="CONFIG_TCPSVD"/>
+            <feature name="CONFIG_SLEEP"/>
+            <feature name="CONFIG_MDEV_CONF"/>
+            <feature name="CONFIG_MDEV"/>
+            <feature name="CONFIG_ZCAT"/>
+            <feature name="CONFIG_STOP"/>
+            <feature name="CONFIG_PKILL"/>
+            <feature name="CONFIG_LOAD_POLICY"/>
+            <feature name="CONFIG_UPTIME"/>
+            <feature name="CONFIG_WHO"/>
+            <feature name="CONFIG_TIME"/>
+            <feature name="CONFIG_LOGIN"/>
+            <feature name="CONFIG_SHA512SUM"/>
+            <feature name="CONFIG_NETCAT"/>
+            <feature name="CONFIG_NETCAT_LISTEN"/>
+            <feature name="CONFIG_SU"/>
+            <feature name="CONFIG_BOOTCHARTD"/>
+        </and>
+    </struct>
+    <constraints>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_ID_Z</var>
+                </not>
+                <var>CONFIG_ID</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_FSFREEZE</var>
+                </not>
+                <var>CONFIG_TOYBOX_FIFREEZE</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_FALLOCATE</var>
+                <not>
+                    <var>CONFIG_FALLOCATE</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_HELP</var>
+                <not>
+                    <var>CONFIG_HELP</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_PASSWD</var>
+                <not>
+                    <var>CONFIG_PASSWD_SAD</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYBOX_SELINUX</var>
+                </not>
+                <not>
+                    <var>CONFIG_TOYBOX_LSM_NONE</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_SELINUX</var>
+                <not>
+                    <var>CONFIG_SETENFORCE</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_SHADOW</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_ON_ANDROID</var>
+                <not>
+                    <var>CONFIG_LOG</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_GETPROP</var>
+                </not>
+                <var>CONFIG_TOYBOX_SELINUX</var>
+                <var>CONFIG_TOYBOX_ON_ANDROID</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_START</var>
+                </not>
+                <var>CONFIG_TOYBOX_ON_ANDROID</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_W</var>
+                </not>
+                <var>CONFIG_TOYBOX_UTMPX</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_FGREP</var>
+                </not>
+                <var>CONFIG_GREP</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_MKFIFO_Z</var>
+                </not>
+                <not>
+                    <var>CONFIG_TOYBOX_LSM_NONE</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_FIFREEZE</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYBOX_FLOAT</var>
+                </not>
+                <not>
+                    <var>CONFIG_SORT_BIG</var>
+                </not>
+                <var>CONFIG_SORT_FLOAT</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_KILL</var>
+                <not>
+                    <var>CONFIG_KILLALL5</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_MKFIFO</var>
+                </not>
+                <var>CONFIG_MKFIFO_Z</var>
+                <var>CONFIG_TOYBOX_LSM_NONE</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_SORT_BIG</var>
+                </not>
+                <var>CONFIG_SORT</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_GZIP</var>
+                </not>
+                <var>CONFIG_TOYBOX_LIBZ</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_LS</var>
+                <not>
+                    <var>CONFIG_LS_COLOR</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYBOX_FORK</var>
+                </not>
+                <not>
+                    <var>CONFIG_TOYBOX_MUSL_NOMMU_IS_BROKEN</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_SORT_BIG</var>
+                <not>
+                    <var>CONFIG_SORT_FLOAT</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_MKE2FS_EXTENDED</var>
+                </not>
+                <var>CONFIG_MKE2FS</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_SENDEVENT</var>
+                </not>
+                <var>CONFIG_TOYBOX_ON_ANDROID</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_PRLIMIT</var>
+                <not>
+                    <var>CONFIG_ULIMIT</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_PGREP</var>
+                </not>
+                <var>CONFIG_PGKILL_COMMON</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_XARGS</var>
+                <not>
+                    <var>CONFIG_XARGS_PEDANTIC</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_EXIT</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_EGREP</var>
+                <not>
+                    <var>CONFIG_GREP</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_ICONV</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_ID_Z</var>
+                </not>
+                <not>
+                    <var>CONFIG_TOYBOX_LSM_NONE</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_NSENTER</var>
+                </not>
+                <var>CONFIG_TOYBOX_CONTAINER</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOP_COMMON</var>
+                <not>
+                    <var>CONFIG_TOP</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_CD</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_ID_Z</var>
+                <not>
+                    <var>CONFIG_ID</var>
+                </not>
+                <var>CONFIG_TOYBOX_LSM_NONE</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_UID_USR</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX</var>
+                <not>
+                    <var>CONFIG_HELP_EXTRAS</var>
+                </not>
+                <var>CONFIG_HELP</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_OPENVT</var>
+                </not>
+                <var>CONFIG_TOYBOX_FORK</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_PGKILL_COMMON</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYBOX_ON_ANDROID</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_SELINUX</var>
+                <not>
+                    <var>CONFIG_RESTORECON</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_LSPCI_TEXT</var>
+                </not>
+                <var>CONFIG_LSPCI</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_MKNOD_Z</var>
+                <not>
+                    <var>CONFIG_MKNOD</var>
+                </not>
+                <var>CONFIG_TOYBOX_LSM_NONE</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_MKE2FS</var>
+                <not>
+                    <var>CONFIG_MKE2FS_GEN</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_SHA256SUM</var>
+                </not>
+                <var>CONFIG_TOYBOX_LIBCRYPTO</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_MKE2FS</var>
+                <not>
+                    <var>CONFIG_MKE2FS_JOURNAL</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_KLOGD</var>
+                <not>
+                    <var>CONFIG_KLOGD_SOURCE_RING_BUFFER</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_SEQ</var>
+                </not>
+                <var>CONFIG_TOYBOX_FLOAT</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_DHCPD</var>
+                <not>
+                    <var>CONFIG_DEBUG_DHCP</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_CP</var>
+                <not>
+                    <var>CONFIG_CP_PRESERVE</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_SHADOW</var>
+                <not>
+                    <var>CONFIG_PASSWD</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_FORK</var>
+                <not>
+                    <var>CONFIG_NBD_CLIENT</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX</var>
+                <not>
+                    <var>CONFIG_HELP_EXTRAS</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_SHA224SUM</var>
+                </not>
+                <var>CONFIG_TOYBOX_LIBCRYPTO</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_MKDIR</var>
+                <not>
+                    <var>CONFIG_MKDIR_Z</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_UID_SYS</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_SETPROP</var>
+                </not>
+                <var>CONFIG_TOYBOX_ON_ANDROID</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_ICONV</var>
+                </not>
+                <var>CONFIG_TOYBOX_ICONV</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_FLOAT</var>
+                <not>
+                    <var>CONFIG_SLEEP_FLOAT</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYBOX_LSM_NONE</var>
+                </not>
+                <not>
+                    <var>CONFIG_TOYBOX_SMACK</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TAIL</var>
+                <not>
+                    <var>CONFIG_TAIL_SEEK</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_RUNCON</var>
+                </not>
+                <var>CONFIG_TOYBOX_SELINUX</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_SELINUX</var>
+                <var>CONFIG_TOYBOX_LSM_NONE</var>
+                <var>CONFIG_TOYBOX_SMACK</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_LOGGER</var>
+                </not>
+                <var>CONFIG_SYSLOGD</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TIMEOUT</var>
+                </not>
+                <var>CONFIG_TOYBOX_FLOAT</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_SELINUX</var>
+                <not>
+                    <var>CONFIG_CHCON</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_HELP</var>
+                <not>
+                    <var>CONFIG_TOYBOX_HELP_DASHDASH</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_MKPASSWD</var>
+                </not>
+                <not>
+                    <var>CONFIG_TOYBOX_ON_ANDROID</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_SELINUX</var>
+                <not>
+                    <var>CONFIG_GETENFORCE</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_CAT_V</var>
+                </not>
+                <var>CONFIG_CAT</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYBOX_ANDROID_SCHEDPOLICY</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_MKFIFO</var>
+                <not>
+                    <var>CONFIG_MKFIFO_Z</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_MKNOD_Z</var>
+                </not>
+                <var>CONFIG_MKNOD</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOP_COMMON</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_MKE2FS</var>
+                <not>
+                    <var>CONFIG_MKE2FS_LABEL</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_GUNZIP</var>
+                </not>
+                <var>CONFIG_TOYBOX_LIBZ</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYBOX_CONTAINER</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_MKDIR</var>
+                </not>
+                <var>CONFIG_MKDIR_Z</var>
+                <var>CONFIG_TOYBOX_LSM_NONE</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_FORK</var>
+                <var>CONFIG_TOYBOX_MUSL_NOMMU_IS_BROKEN</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOP_COMMON</var>
+                <not>
+                    <var>CONFIG_IOTOP</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_UNSHARE</var>
+                </not>
+                <var>CONFIG_TOYBOX_CONTAINER</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_SHADOW</var>
+                <not>
+                    <var>CONFIG_SULOGIN</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_MKDIR_Z</var>
+                </not>
+                <not>
+                    <var>CONFIG_TOYBOX_LSM_NONE</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYBOX_SELINUX</var>
+                </not>
+                <not>
+                    <var>CONFIG_TOYBOX_SMACK</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_SHA384SUM</var>
+                </not>
+                <var>CONFIG_TOYBOX_LIBCRYPTO</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_FORK</var>
+                <not>
+                    <var>CONFIG_CRONTAB</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_FGREP</var>
+                <not>
+                    <var>CONFIG_GREP</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYBOX_PRLIMIT</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_FORK</var>
+                <not>
+                    <var>CONFIG_TCPSVD</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_TOYBOX_FLOAT</var>
+                </not>
+                <not>
+                    <var>CONFIG_SLEEP</var>
+                </not>
+                <var>CONFIG_SLEEP_FLOAT</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_MDEV_CONF</var>
+                </not>
+                <var>CONFIG_MDEV</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_FLOAT</var>
+                <not>
+                    <var>CONFIG_SORT_FLOAT</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_EGREP</var>
+                </not>
+                <var>CONFIG_GREP</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_ZCAT</var>
+                </not>
+                <var>CONFIG_TOYBOX_LIBZ</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_MKNOD_Z</var>
+                </not>
+                <not>
+                    <var>CONFIG_TOYBOX_LSM_NONE</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_UTMPX</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_ON_ANDROID</var>
+                <not>
+                    <var>CONFIG_STOP</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_PKILL</var>
+                </not>
+                <var>CONFIG_PGKILL_COMMON</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_LOAD_POLICY</var>
+                </not>
+                <var>CONFIG_TOYBOX_SELINUX</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_FALLOCATE</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_HELP_EXTRAS</var>
+                </not>
+                <var>CONFIG_HELP</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_UPTIME</var>
+                </not>
+                <var>CONFIG_TOYBOX_UTMPX</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_WHO</var>
+                </not>
+                <var>CONFIG_TOYBOX_UTMPX</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_FLOAT</var>
+                <not>
+                    <var>CONFIG_TIME</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_GETPROP</var>
+                </not>
+                <var>CONFIG_TOYBOX_SELINUX</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_SHADOW</var>
+                <not>
+                    <var>CONFIG_LOGIN</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_SHA512SUM</var>
+                </not>
+                <var>CONFIG_TOYBOX_LIBCRYPTO</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_SLEEP</var>
+                <not>
+                    <var>CONFIG_SLEEP_FLOAT</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <not>
+                    <var>CONFIG_GETPROP</var>
+                </not>
+                <var>CONFIG_TOYBOX_ON_ANDROID</var>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_NETCAT</var>
+                <not>
+                    <var>CONFIG_NETCAT_LISTEN</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_SHADOW</var>
+                <not>
+                    <var>CONFIG_SU</var>
+                </not>
+            </disj>
+        </rule>
+        <rule>
+            <disj>
+                <var>CONFIG_TOYBOX_FORK</var>
+                <not>
+                    <var>CONFIG_BOOTCHARTD</var>
+                </not>
+            </disj>
+        </rule>
+    </constraints>
+    <calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+    <comments/>
+    <featureOrder userDefined="false"/>
+</featureModel>
